@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{124623F0-1BE8-4641-A4F0-AE4A626BFB15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TurretFighter</RootNamespace>
+    <AssemblyName>TurretFighter</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BlackWidow.cs" />
+    <Compile Include="Cyborg.cs" />
+    <Compile Include="Drawings.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="GameScore.cs" />
+    <Compile Include="HUD.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="MouseCursor.cs" />
+    <Compile Include="MsgBox.cs" />
+    <Compile Include="MyTimer.cs" />
+    <Compile Include="Players.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Projectiles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShortVisualEffect.cs" />
+    <Compile Include="Soldier.cs" />
+    <Compile Include="SomeMath.cs" />
+    <Compile Include="SpriteAnimation.cs" />
+    <Compile Include="SpriteManager.cs" />
+    <Compile Include="StopWatch.cs" />
+    <Compile Include="Tank.cs" />
+    <Compile Include="Turret.cs" />
+    <Compile Include="WeaponManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Menu\CrossHair.png" />
+    <Content Include="Content\Menu\CrosshairBlue.png" />
+    <Content Include="Content\Menu\HighScores.png" />
+    <Content Include="Content\Menu\Level1.png" />
+    <Content Include="Content\Menu\Level1_Back.jpg" />
+    <Content Include="Content\Menu\Level2.png" />
+    <Content Include="Content\Menu\Level2_Back.png" />
+    <Content Include="Content\Menu\Level3.png" />
+    <Content Include="Content\Menu\Level3_Back.png" />
+    <Content Include="Content\Menu\Level4.png" />
+    <Content Include="Content\Menu\Level4_Back.png" />
+    <Content Include="Content\Menu\Level5.png" />
+    <Content Include="Content\Menu\Level5_Back.png" />
+    <Content Include="Content\Menu\LoadLevel.png" />
+    <Content Include="Content\Menu\MainBackground.png" />
+    <Content Include="Content\Menu\MenuCursor.png" />
+    <Content Include="Content\Menu\MsgBoxNo.png" />
+    <Content Include="Content\Menu\MsgBoxOK.png" />
+    <Content Include="Content\Menu\MsgBoxYes.png" />
+    <Content Include="Content\Menu\NewGame.png" />
+    <Content Include="Content\Menu\Quit.png" />
+    <Content Include="Content\Menu\TurretFighterMain.png" />
+    <Content Include="Content\Sounds\BlackWidow\CWPulse.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\death.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\gun_ricochet.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\impact1.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\impact2.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\impact3.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\impact4.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\impact5.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\LaserBlast.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\Level 5 - Cautious-Path.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\Level 5 Intro V2.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\MissileLaunch.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\paralysing_beam.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\Regenerate.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\Shield.mp3" />
+    <Content Include="Content\Sounds\BlackWidow\SpawnDrone.mp3" />
+    <Content Include="Content\Sounds\Cyborg\cyborggunshot.mp3" />
+    <Content Include="Content\Sounds\Cyborg\cyborg_multishot.mp3" />
+    <Content Include="Content\Sounds\Cyborg\death.mp3" />
+    <Content Include="Content\Sounds\Cyborg\energyballv4.mp3" />
+    <Content Include="Content\Sounds\Cyborg\impact1.mp3" />
+    <Content Include="Content\Sounds\Cyborg\impact2.mp3" />
+    <Content Include="Content\Sounds\Cyborg\impact3.mp3" />
+    <Content Include="Content\Sounds\Cyborg\impact4.mp3" />
+    <Content Include="Content\Sounds\Cyborg\impact5.mp3" />
+    <Content Include="Content\Sounds\Cyborg\Level 4 - Iron-Man.mp3" />
+    <Content Include="Content\Sounds\Cyborg\Level 4 Intro V2.mp3" />
+    <Content Include="Content\Sounds\Cyborg\shield.mp3" />
+    <Content Include="Content\Sounds\Cyborg\shieldimpact1.mp3" />
+    <Content Include="Content\Sounds\Cyborg\shieldimpact2.mp3" />
+    <Content Include="Content\Sounds\Cyborg\shieldimpact3.mp3" />
+    <Content Include="Content\Sounds\Cyborg\shieldimpact4.mp3" />
+    <Content Include="Content\Sounds\Cyborg\swoosh1.mp3" />
+    <Content Include="Content\Sounds\Cyborg\swoosh2.mp3" />
+    <Content Include="Content\Sounds\Cyborg\swoosh3.mp3" />
+    <Content Include="Content\Sounds\Misc\grenade1.mp3" />
+    <Content Include="Content\Sounds\Misc\grenade2.mp3" />
+    <Content Include="Content\Sounds\Misc\grenade3.mp3" />
+    <Content Include="Content\Sounds\Misc\laugh2.mp3" />
+    <Content Include="Content\Sounds\Misc\Menu.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket1.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket2.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket3.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket4.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket5.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket6.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket7.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket8.mp3" />
+    <Content Include="Content\Sounds\Misc\rocket9.mp3" />
+    <Content Include="Content\Sounds\Misc\WallHit.mp3" />
+    <Content Include="Content\Sounds\nShoot.mp3" />
+    <Content Include="Content\Sounds\Soldier\grenadethrow.mp3" />
+    <Content Include="Content\Sounds\Soldier\impact1.mp3" />
+    <Content Include="Content\Sounds\Soldier\impact2.mp3" />
+    <Content Include="Content\Sounds\Soldier\impact3.mp3" />
+    <Content Include="Content\Sounds\Soldier\impact4.mp3" />
+    <Content Include="Content\Sounds\Soldier\impact5.mp3" />
+    <Content Include="Content\Sounds\Soldier\Level 1 Background.mp3" />
+    <Content Include="Content\Sounds\Soldier\Level 1 Intro V1.mp3" />
+    <Content Include="Content\Sounds\Soldier\Level 2 Intro-Background.mp3" />
+    <Content Include="Content\Sounds\Soldier\RocketShot.mp3" />
+    <Content Include="Content\Sounds\Soldier\single_shot.mp3" />
+    <Content Include="Content\Sounds\Tank\AlbumArtSmall.jpg" />
+    <Content Include="Content\Sounds\Tank\bullet_hit_body.mp3" />
+    <Content Include="Content\Sounds\Tank\death.mp3" />
+    <Content Include="Content\Sounds\Tank\Folder.jpg" />
+    <Content Include="Content\Sounds\Tank\gunshot.mp3" />
+    <Content Include="Content\Sounds\Tank\gun_ricochet1.mp3" />
+    <Content Include="Content\Sounds\Tank\gun_ricochet2.mp3" />
+    <Content Include="Content\Sounds\Tank\LaserBeam.mp3" />
+    <Content Include="Content\Sounds\Tank\LaserBeamV2.mp3" />
+    <Content Include="Content\Sounds\Tank\Level 3 - Background.mp3" />
+    <Content Include="Content\Sounds\Tank\tankgun_rocket.mp3" />
+    <Content Include="Content\Sounds\Tank\tank_tracks.mp3" />
+    <Content Include="Content\Sounds\Turret\bullet_impact1.mp3" />
+    <Content Include="Content\Sounds\Turret\bullet_impact2.mp3" />
+    <Content Include="Content\Sounds\Turret\bullet_impact3.mp3" />
+    <Content Include="Content\Sounds\Turret\death.mp3" />
+    <Content Include="Content\Sounds\Turret\gun_shot.mp3" />
+    <Content Include="Content\Sounds\Turret\laserimpact1.mp3" />
+    <Content Include="Content\Sounds\Turret\laserimpact2.mp3" />
+    <Content Include="Content\Sounds\Turret\laserimpact3.mp3" />
+    <Content Include="Content\Sounds\Turret\missile_launch.mp3" />
+    <Content Include="Content\Sounds\Turret\rocket_launcherV2.mp3" />
+    <Content Include="Content\Sprites\BlackWidow\BlackWidowMoveV2.png" />
+    <Content Include="Content\Sprites\BlackWidow\BlackWidowMoveV3.png" />
+    <Content Include="Content\Sprites\BlackWidow\BlackWidowWalk.png" />
+    <Content Include="Content\Sprites\BlackWidow\BulletImpact1.png" />
+    <Content Include="Content\Sprites\BlackWidow\BulletImpact2.png" />
+    <Content Include="Content\Sprites\BlackWidow\BulletImpact3.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWDeath.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWDroneExplosion.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWDroneImpact.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWGunfire.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWHMExplosion1.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWHMExplosion2.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWRocket.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWRocketGunfire.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWShieldImpact1.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWShieldImpact2.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWShieldImpact3.png" />
+    <Content Include="Content\Sprites\BlackWidow\BWVampReturn.png" />
+    <Content Include="Content\Sprites\BlackWidow\DroneSpawnPoint.png" />
+    <Content Include="Content\Sprites\BlackWidow\ImmuneShield.png" />
+    <Content Include="Content\Sprites\BlackWidow\PBSource.png" />
+    <Content Include="Content\Sprites\BlackWidow\RocketControlWave.png" />
+    <Content Include="Content\Sprites\BlackWidow\SDSource.png" />
+    <Content Include="Content\Sprites\BlackWidow\SpiderDrone.png" />
+    <Content Include="Content\Sprites\BlackWidow\SpiderDroneAnimation.png" />
+    <Content Include="Content\Sprites\BlackWidow\SpiderDroneAnimationPROPER.png" />
+    <Content Include="Content\Sprites\BlackWidow\VampiricBlast.png" />
+    <Content Include="Content\Sprites\BlackWidow\VampiricBlastRet.png" />
+    <Content Include="Content\Sprites\bloodsplatter1.png" />
+    <Content Include="Content\Sprites\bloodsplatter2.png" />
+    <Content Include="Content\Sprites\bloodsplatter3.png" />
+    <Content Include="Content\Sprites\Cyborg\CBDeathExplosion.png" />
+    <Content Include="Content\Sprites\Cyborg\CBGunfire.png" />
+    <Content Include="Content\Sprites\Cyborg\CBRocketGunfire.png" />
+    <Content Include="Content\Sprites\Cyborg\CBRocketGunfireV2.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgEBExplosion1.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgEBExplosion2.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgEBExplosion3.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgEnergyBall.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgHand1.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgHand2.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgHead.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgImpact1.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgImpact2.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgImpact3.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgMovement.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgSSEffect.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgSSEffect2.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgSSEffect3.png" />
+    <Content Include="Content\Sprites\Cyborg\CyborgSSEffect4.png" />
+    <Content Include="Content\Sprites\Cyborg\LaserProjectile.png" />
+    <Content Include="Content\Sprites\Cyborg\Shield.png" />
+    <Content Include="Content\Sprites\Cyborg\ShieldHit.png" />
+    <Content Include="Content\Sprites\HealthBar2.png" />
+    <Content Include="Content\Sprites\HealthBar3.png" />
+    <Content Include="Content\Sprites\msCursor.png" />
+    <Content Include="Content\Sprites\Soldiers\grenade.png" />
+    <Content Include="Content\Sprites\Soldiers\Gunfire.png" />
+    <Content Include="Content\Sprites\Soldiers\NormalExplosion1.png" />
+    <Content Include="Content\Sprites\Soldiers\NormalExplosion2.png" />
+    <Content Include="Content\Sprites\Soldiers\NormalExplosion3.png" />
+    <Content Include="Content\Sprites\Soldiers\NormalExplosion4.png" />
+    <Content Include="Content\Sprites\Soldiers\SLDBullet.png" />
+    <Content Include="Content\Sprites\Soldiers\SLDGrenadeExplosion1.png" />
+    <Content Include="Content\Sprites\Soldiers\SLDGrenadeExplosion2.png" />
+    <Content Include="Content\Sprites\Soldiers\SLDGrenadeExplosion3.png" />
+    <Content Include="Content\Sprites\Soldiers\SLDRocket.png" />
+    <Content Include="Content\Sprites\Soldiers\SLDRocketGunfire.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierDeath.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierDeath02.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierDeathV1.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierDeathV1_02.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierDeathV2.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierDeathV2_02.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierV0.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierV1.png" />
+    <Content Include="Content\Sprites\Soldiers\SoldierV2.png" />
+    <Content Include="Content\Sprites\Soldiers\SpriteGrenade.png" />
+    <Content Include="Content\Sprites\Soldiers\SpriteGrenadeV1.png" />
+    <Content Include="Content\Sprites\Soldiers\SpriteGrenadeV2.png" />
+    <Content Include="Content\Sprites\Tank\ImpactRebound.png" />
+    <Content Include="Content\Sprites\Tank\LaserFocuse.png" />
+    <Content Include="Content\Sprites\Tank\Tank.png" />
+    <Content Include="Content\Sprites\Tank\Tank120mm.png" />
+    <Content Include="Content\Sprites\Tank\tankbody.png" />
+    <Content Include="Content\Sprites\Tank\tankbodyV2.png" />
+    <Content Include="Content\Sprites\Tank\TankCannon.png" />
+    <Content Include="Content\Sprites\Tank\TankDeath.png" />
+    <Content Include="Content\Sprites\Tank\TankGunfire.png" />
+    <Content Include="Content\Sprites\Tank\TankGunFiring.png" />
+    <Content Include="Content\Sprites\Tank\tankhood.png" />
+    <Content Include="Content\Sprites\Tank\TankImpact.png" />
+    <Content Include="Content\Sprites\Tank\tanklaser.png" />
+    <Content Include="Content\Sprites\Tank\TankRocketExplosion1.png" />
+    <Content Include="Content\Sprites\Tank\TankRocketExplosion2.png" />
+    <Content Include="Content\Sprites\Tank\tankRound.png" />
+    <Content Include="Content\Sprites\Tereptargy.png" />
+    <Content Include="Content\Sprites\Turret\bullet2.png" />
+    <Content Include="Content\Sprites\Turret\cannon.jpg" />
+    <Content Include="Content\Sprites\Turret\rocket.png" />
+    <Content Include="Content\Sprites\Turret\TRocketExplosion1.png" />
+    <Content Include="Content\Sprites\Turret\TRocketExplosion2.png" />
+    <Content Include="Content\Sprites\Turret\TRocketExplosion3.png" />
+    <Content Include="Content\Sprites\Turret\TRocketExplosion4.png" />
+    <Content Include="Content\Sprites\Turret\Turret.png" />
+    <Content Include="Content\Sprites\Turret\TurretDeath.png" />
+    <Content Include="Content\Sprites\Turret\TurretGunfireV1.png" />
+    <Content Include="Content\Sprites\Turret\TurretGunfireV2.png" />
+    <Content Include="Content\Sprites\Turret\TurretGunfireV3.png" />
+    <Content Include="Content\Sprites\Turret\TurretImpact.png" />
+    <Content Include="Content\Sprites\Turret\TurretRocketFire.png" />
+    <Content Include="Content\Sprites\WallHit.png" />
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="BITING_V2.ttf" />
+    <None Include="Content\Fonts\CountDown.spritefont" />
+    <None Include="Content\Fonts\GameFont.spritefont" />
+    <None Include="Content\Fonts\MsgBoxFont.spritefont" />
+    <None Include="Content\Sprites\explosion1.psd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
